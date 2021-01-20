@@ -1,0 +1,7 @@
+<page xmlns="urn:enonic:xp:model:1.0">
+    <display-name>Part region</display-name>
+    <description>Part region til press release</description>
+    <regions>
+        <region name="main"/>
+    </regions>
+</page>

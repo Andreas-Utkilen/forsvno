@@ -1,0 +1,3 @@
+export ENONIC_CLI_REMOTE_URL=http://54.74.13.195:4848
+export ENONIC_CLI_REMOTE_USER=andreastraautkilen
+export ENONIC_CLI_REMOTE_PASS=1q2w3e4r5t

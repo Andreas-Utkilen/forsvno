@@ -1,0 +1,20 @@
+<content-type xmlns="urn:enonic:xp:model:1.0">
+    <display-name>Pressemelding</display-name>
+    <description>Innholdstype for pressemelding</description>
+    <super-type>base:structured</super-type>
+    <form>
+        <mixin name="background-color" />
+        <input name="preface" type="TextArea">
+            <label>Ingress</label>
+            <config>
+                <max-length>300</max-length>
+            </config>
+        </input>
+        <input name="byline" type="HtmlArea">
+            <label>Byline</label>
+        </input>
+        <input name="body" type="HtmlArea">
+            <label>Brødtekst</label>
+        </input>
+    </form>
+</content-type>
