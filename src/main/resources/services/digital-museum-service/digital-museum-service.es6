@@ -1,0 +1,94 @@
+const root = 'https://api.dimu.org/api';
+const libs = {
+  portal: require('/lib/xp/portal'),
+  httpClient: require('/lib/http-client'),
+  xml2js: require("/site/lib/bouvet/xml2json")
+};
+
+exports.get = (req) => {
+  return {
+    contentType: 'application/json',
+    body: getItems(parseparams(req.params))
+  }
+}
+
+function getItems(params) {
+  const query = (params.query || '').trim();
+  const owners = fetch('/owners?country=no&api.key=demo');
+  return parseResults(owners, params, query)
+}
+
+function parseResults(xml, params, query) {
+  let data = libs.xml2js.parseString(xml);
+  let hits = parseResponse(data, query);
+  return {
+    hits: uniqBy(hits).slice(params.start, params.end),
+    count: params.count,
+    total: 0
+  }
+}
+
+function parseResponse(data, query) {
+  const filtered = (data.owners ? data.owners.owner : []).filter((owner) => owner.name.indexOf(query) != -1 || owner.identifier.indexOf(query) != -1);
+  return filtered.map((v) => ({
+    id: v.identifier,
+    description: v.identifier,
+    displayName: v.name
+  }))
+}
+
+function fetch(url) {
+  try {
+    const response = libs.httpClient.request({
+      url: `${root}${url}`,
+      method: 'GET',
+      headers: {
+        'Accept': 'application/json'
+      },
+      contentType: 'application/json',
+      connectTimeout: 5000,
+      readTimeout: 10000
+    });
+    if (response.status === 200) {
+      return response.body;
+    }
+  } catch (e) {
+    log.info(e)
+  }
+  return "";
+}
+
+const uniqBy = (arr) => {
+  const result = [];
+  const map = [];
+  arr.forEach((item) => {
+    if (map.indexOf(item.id) === -1) {
+      map.push(item.id);
+      result.push(item);
+    }
+  });
+  return result;
+};
+
+function parseparams(params) {
+
+  let query = params['query'],
+    start, count;
+  try {
+    start = Math.max(parseInt(params['start']) || 0, 0);
+  } catch (e) {
+    start = 0;
+  }
+  try {
+    count = Math.max(parseInt(params['count']) || 15, 0);
+  } catch (e) {
+    count = 15;
+  }
+
+  return {
+    query: query,
+    start: start,
+    end: start + count,
+    count: count
+  }
+}
