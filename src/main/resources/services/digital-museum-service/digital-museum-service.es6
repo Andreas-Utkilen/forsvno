@@ -14,7 +14,7 @@ exports.get = (req) => {
 
 function getItems(params) {
   const query = (params.query || '').trim();
-  const owners = fetch('/owners?country=no&api.key=demo');
+  const owners = fetch('/owners?country=no&api.key=');
   return parseResults(owners, params, query)
 }
 
