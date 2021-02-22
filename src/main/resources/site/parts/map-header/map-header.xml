@@ -1,0 +1,32 @@
+<part xmlns="urn:enonic:xp:model:1.0">
+    <display-name>Karttopp</display-name>
+    <form>
+        <input name="header" type="TextLine">
+            <!-- @description[no]: Overskrift -->
+            <!-- @description[en]: Header -->
+            <label i18n="header">Overskrift</label>
+            <occurrences minimum="1" maximum="1"/>
+            <config>
+                <max-length>29</max-length>
+            </config>
+        </input>
+        <input name="subheader" type="TextLine">
+            <!-- @description[no]: Underoverskrift -->
+            <!-- @description[en]: Subheader -->
+            <label i18n="subheader">Underoverskrift</label>
+            <occurrences minimum="0" maximum="1"/>
+            <config>
+                <max-length>140</max-length>
+            </config>
+        </input>
+        <input name="buttonText" type="TextLine">
+            <!-- @description[no]: Tekst, knapp -->
+            <!-- @description[en]: Button text -->
+            <label i18n="buttonText">Tekst, knapp</label>
+            <occurrences minimum="0" maximum="1"/>
+            <config>
+                <max-length>50</max-length>
+            </config>
+        </input>
+    </form>
+</part>
