@@ -14,7 +14,8 @@ exports.get = (req) => {
 
 function getItems(params) {
   const query = (params.query || '').trim();
-  const owners = fetch('/owners?country=no&api.key=');
+  const config = libs.portal.getSiteConfig();
+  const owners = fetch(`/owners?country=no&api.key=${encodeURIComponent(config.digitalMuseumAPI)}`);
   return parseResults(owners, params, query)
 }
 
@@ -29,7 +30,7 @@ function parseResults(xml, params, query) {
 }
 
 function parseResponse(data, query) {
-  const filtered = (data.owners ? data.owners.owner : []).filter((owner) => owner.name.indexOf(query) != -1 || owner.identifier.indexOf(query) != -1);
+  const filtered = (data.owners ? data.owners.owner : []).filter((owner) => owner.name.toLowerCase().indexOf(query.toLowerCase()) != -1 || owner.identifier.toLowerCase().indexOf(query.toLowerCase()) != -1);
   return filtered.map((v) => ({
     id: v.identifier,
     description: v.identifier,
@@ -52,6 +53,7 @@ function fetch(url) {
     if (response.status === 200) {
       return response.body;
     }
+    log.info(JSON.stringify(response));
   } catch (e) {
     log.info(e)
   }
