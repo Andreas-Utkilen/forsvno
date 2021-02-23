@@ -106,10 +106,18 @@
 }
 
 .media-player__player-inner .media-player__player-container .media-player__player-btn-container .media-player__volume-controls input::-moz-range-thumb {
-  width: 10px;
-  height: 10px;
+  -webkit-appearance: none;
+  -moz-apperance: none;
+  appearance: none;
+  width: 3px;
+  height: 7.5px;
   background: #191b21;
+  border: none;
   cursor: pointer;
+}
+
+.media-player__player-inner .media-player__player-container .media-player__player-btn-container .media-player__progress-container {
+  width: 100%;
 }
 
 .media-player__player-inner .media-player__player-container .media-player__player-btn-container .media-player__progress-container canvas {
@@ -200,7 +208,6 @@
 .media-player__links {
   display: flex;
   justify-content: stretch;
-  height: calc(100% - 3.375rem);
   flex-direction: column;
 }
 
