@@ -1,7 +1,8 @@
 const libs = {
   portal: require("/lib/xp/portal"),
   freemarker: require("/site/lib/tineikt/freemarker"),
-  utilx: require("/lib/bouvet/util-ex")
+  utilx: require("/lib/bouvet/util-ex"),
+  i18n: require("/lib/xp/i18n")
 };
 
 const mapdata = [{
@@ -314,7 +315,8 @@ exports.get = () => {
       marker: libs.portal.assetUrl({ path: "images/marker.png" }),
       markerRetina: libs.portal.assetUrl({ path: "images/marker.png" }),
       shadow: libs.portal.assetUrl({ path: "images/marker-shadow.png" }),
-    }
+    },
+    localize: libs.i18n.getPhrases([], ["i18n/phrases"])
   }
   const model = {
     uniqueId,
