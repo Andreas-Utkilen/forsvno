@@ -16,16 +16,16 @@ function getItems(params) {
   const query = (params.query || '').trim();
   const config = libs.portal.getSiteConfig();
   const owners = fetch(`/owners?country=no&api.key=${encodeURIComponent(config.digitalMuseumAPI)}`);
-  return parseResults(owners, params, query)
+  return parseResults(owners, query)
 }
 
-function parseResults(xml, params, query) {
+function parseResults(xml, query) {
   let data = libs.xml2js.parseString(xml);
-  let hits = parseResponse(data, query);
+  let hits = uniqBy(parseResponse(data, query));
   return {
-    hits: uniqBy(hits).slice(params.start, params.end),
-    count: params.count,
-    total: 0
+    hits: hits,
+    count: hits.length,
+    total: hits.length
   }
 }
 

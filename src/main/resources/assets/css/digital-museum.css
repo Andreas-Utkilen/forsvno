@@ -7,6 +7,23 @@
   margin-top: 2rem;
 }
 
+.digital-museum__wrapper .digital-museum #wcontainer #wsearch-pages * {
+  font-size: 1rem;
+}
+
+.digital-museum__wrapper .digital-museum #wcontainer #wsearch-result>p {
+  font-size: 1rem;
+}
+
+.digital-museum__wrapper .digital-museum #wcontainer .wsearch-input {
+  font-size: 1rem;
+}
+
+.digital-museum__wrapper .digital-museum #wcontainer #wsearch-result>p>a {
+  font-size: 1rem;
+  text-decoration: underline;
+}
+
 .digital-museum__wrapper .digital-museum #wcontainer .wrows {
   display: flex;
   flex-wrap: wrap;

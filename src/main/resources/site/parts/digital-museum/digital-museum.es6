@@ -1,6 +1,7 @@
 const libs = {
   portal: require("/lib/xp/portal"),
   freemarker: require("/site/lib/tineikt/freemarker"),
+  utilx: require("/lib/bouvet/util-ex")
 };
 
 exports.get = () => {
@@ -12,7 +13,7 @@ exports.get = () => {
     backgroundColor: config.color || "white",
     cols: config.cols || 2,
     rows: config.rows || 2,
-    owner: config.owner ? config.owner.join(",") : ""
+    owner: config.owner ? libs.utilx.forceArray(config.owner).join(",") : ""
   }
   const view = resolve("digital-museum.ftl");
   const body = libs.freemarker.render(view, data);
