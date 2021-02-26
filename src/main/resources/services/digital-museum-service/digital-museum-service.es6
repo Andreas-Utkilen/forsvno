@@ -1,9 +1,10 @@
-const root = 'https://api.dimu.org/api';
 const libs = {
   portal: require('/lib/xp/portal'),
   httpClient: require('/lib/http-client'),
   xml2js: require("/site/lib/bouvet/xml2json")
 };
+
+const root = 'https://api.dimu.org/api';
 
 exports.get = (req) => {
   return {
