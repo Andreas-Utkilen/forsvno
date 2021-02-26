@@ -1,0 +1,42 @@
+<part xmlns="urn:enonic:xp:model:1.0">
+    <display-name>Digitalt museum</display-name>
+    <form>
+        <input name="search" type="TextLine">
+            <!-- @description[no]: Søk -->
+            <!-- @description[en]: Search string -->
+            <label i18n="search">Søk</label>
+        </input>
+        <input name="cols" type="ComboBox">
+            <!-- @description[no]: Kolonner -->
+            <!-- @description[en]: Columns -->
+            <label i18n="cols">Kolonner</label>
+            <occurrences minimum="1" maximum="1"/>
+            <config>
+                <option value="2">Smal, 2 kolonner</option> 
+                <option value="4">Medium, 4 kolonner</option>
+                <option value="6">Bred, 6 kolonner</option>
+            </config>
+            <default>2</default> 
+        </input>
+        <input name="rows" type="Long">
+            <!-- @description[no]: Rader -->
+            <!-- @description[en]: Rows -->
+            <label i18n="rows">Rader</label>
+            <default>2</default>
+            <config>
+                <min>1</min> 
+                <max>10</max> 
+            </config>
+        </input>
+        <input type="CustomSelector" name="owner">
+            <!-- @description[no]: Kilder -->
+            <!-- @description[en]: Sources -->
+            <label i18n="sources">Kilder</label>
+            <occurrences minimum="0" maximum="10"/>
+            <config>
+                <service>digital-museum-service</service>
+            </config>
+        </input>
+        <mixin name="background-color"/>
+    </form>
+</part>

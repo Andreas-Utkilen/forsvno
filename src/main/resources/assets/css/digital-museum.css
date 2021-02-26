@@ -1,0 +1,79 @@
+.digital-museum__wrapper .digital-museum #wcontainer {
+  padding: 3rem 0;
+  min-width: unset !important;
+}
+
+.digital-museum__wrapper .digital-museum #wcontainer #wsearch-pages {
+  margin-top: 2rem;
+}
+
+.digital-museum__wrapper .digital-museum #wcontainer #wsearch-pages * {
+  font-size: 1rem;
+}
+
+.digital-museum__wrapper .digital-museum #wcontainer #wsearch-result>p {
+  font-size: 1rem;
+}
+
+.digital-museum__wrapper .digital-museum #wcontainer .wsearch-input {
+  font-size: 1rem;
+}
+
+.digital-museum__wrapper .digital-museum #wcontainer #wsearch-result>p>a {
+  font-size: 1rem;
+  text-decoration: underline;
+}
+
+.digital-museum__wrapper .digital-museum #wcontainer .wrows {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.digital-museum__wrapper .digital-museum #wcontainer * {
+  font-family: 'Cera Pro', sans-serif;
+}
+
+.digital-museum__wrapper .digital-museum #wheader {
+  height: 112px
+}
+
+.digital-museum__wrapper .digital-museum #wcontainer .wsearch-submit {
+  border: none;
+  top: 11px;
+  width: 25px;
+}
+
+.digital-museum__wrapper .digital-museum #wcontainer .wsearch-submit:focus {
+  outline: 1px solid #000;
+}
+
+.digital-museum__wrapper .digital-museum #wcontainer[data-layout="green-light"] {
+  background: #f1f2f0
+}
+
+.digital-museum__wrapper .digital-museum #wcontainer[data-layout="green"] {
+  background: #c6c7c4
+}
+
+.digital-museum__wrapper .digital-museum #wcontainer[data-layout="grey-light"] {
+  background: #f5f7f8
+}
+
+.digital-museum__wrapper .digital-museum #wcontainer[data-layout="blue-light"] {
+  background: #e2e6e9
+}
+
+.digital-museum__wrapper .digital-museum #wcontainer[data-layout="beige-light"] {
+  background: #ede9e8
+}
+
+.digital-museum__wrapper .digital-museum #wcontainer[data-layout="beige"] {
+  background: #e3ddd8
+}
+
+@media (max-width: 888px) {
+  .digital-museum__wrapper .digital-museum {
+    height: unset !important;
+  }
+}

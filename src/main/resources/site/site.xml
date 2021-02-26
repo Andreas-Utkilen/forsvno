@@ -24,6 +24,12 @@
             <showStatus>true</showStatus>
           </config>
         </input>
+        <input name="digitalMuseumAPI" type="TextLine">
+          <!-- @description[no]: API Digitalt museum -->
+          <!-- @description[en]: API Digital museum -->
+          <label i18n="digital.museum">API Digitalt museum</label>
+          <help-text>API nøkkel for DM</help-text>
+        </input>
       </items>
     </field-set>
   </form>
