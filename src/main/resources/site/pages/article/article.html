@@ -1,595 +1,232 @@
 <html lang="no">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="preload" data-th-href="${portal.assetUrl({'_path=css/main.css'})}" as="style">
-    <link rel="stylesheet" data-th-href="${portal.assetUrl({'_path=css/main.css'})}">
-</head>
-<body data-portal-component-type="page" class="">
-    <header class="header__container nav-up">
-        <div class="header ">
-            <div class="header__menu">
-                <button type="button" class="header__button header__menu-toggle">
-                    <div class="hamburger">
-                        <div class="hamburger-bar hamburger-bar--top"></div>
-                        <div class="hamburger-bar hamburger-bar--bottom"></div>
-                    </div>
-                    <span class="header__label">Meny</span>
-                </button>
-            </div>
-            <a class="header__logo" href="/">
-                <img data-th-src="${portal.assetUrl({'_path=images/logo.svg'})}" alt="Forsvaret-logo - Lenke til forsiden" width="51" height="63">
-            </a>
-            <div class="header__search">
-                <button type="button" class="header__button header__menu-toggle header__menu-toggle--search">
-                        <span class="header__label">
-                            Søk </span>
-                    <svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                                d="M13.6463 7.24117C13.6463 10.7396 10.7967 13.5823 7.27313 13.5823C3.74961 13.5823 0.9 10.7396 0.9 7.24117C0.9 3.74277 3.74961 0.9 7.27313 0.9C10.7967 0.9 13.6463 3.74277 13.6463 7.24117Z"
-                                stroke="#191B21" stroke-width="2"></path>
-                        <path d="M12 11.9473L16 15.9297" stroke="#191B21" stroke-width="2" stroke-linecap="square">
-                        </path>
-                    </svg>
-                </button>
-            </div>
-        </div>
-        <div class="header__mega-menu">
-            <div class="mega-menu__wrapper">
-                <div class="mega-menu">
-                    <button type="button" class="header__button mega-menu__close header__menu-toggle">
-                        <div class="hamburger">
-                            <div class="hamburger-bar hamburger-bar--top"></div>
-                            <div class="hamburger-bar hamburger-bar--bottom"></div>
-                        </div>
-                        <span class="header__label">Lukk</span>
-                    </button>
-                    <a class="mega-menu__logo"
-                       href="#">
-                        <img data-th-src="${portal.assetUrl({'_path=images/logo.svg'})}" class="mega-menu__logo-img" alt="Forsvaret-logo - Lenke til forsiden" width="51" height="63">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preload" data-th-href="${portal.assetUrl({'_path=css/main.css'})}" as="style">
+        <link rel="stylesheet" data-th-href="${portal.assetUrl({'_path=css/main.css'})}">
+        <link rel="preload" data-th-href="${portal.assetUrl({'_path=css/itjfn.css'})}" as="style">
+        <link rel="stylesheet" data-th-href="${portal.assetUrl({'_path=css/itjfn.css'})}">
+    </head>
+
+    <body data-portal-component-type="page" class="">
+        <header class="header__container nav-down" id="main-header" style="top: 0px;">
+            <div class="header negative">
+                <div class="header__left">
+                    <a class="header__logo" href="http://localhost:8080/admin/site/preview/i-tjeneste-for-norge/draft/no">
+                        <img data-th-src="${portal.assetUrl({'_path=images/logo.svg'})}" alt="Forsvaret-logo - Lenke til forsiden" width="51" height="63">
                     </a>
-                    <div class="mega-menu__lang">
-                        <span class="active">NO</span>
-                        <a href="#" class="" hreflang="en" lang="en">EN</a>
-                    </div>
-                    <nav class="mega-menu__sluice">
-                        <ul id="sluice">
-                            <li class="sluice__item">
-                                <a class="underline-draw" href="#">
-                                    Egenerklæring
-                                </a>
-                            </li>
-                            <li class="sluice__item">
-                                <a class="underline-draw" href="#">
-                                    Sesjon
-                                </a>
-                            </li>
-                            <li class="sluice__item">
-                                <a class="underline-draw" href="#">
-                                    Førstegangstjeneste
-                                </a>
-                            </li>
-                            <li class="sluice__item">
-                                <a class="underline-draw" href="#">
-                                    Utdanning og kurs
-                                </a>
-                            </li>
-                            <li class="sluice__item">
-                                <a class="underline-draw" href="#">
-                                    Jobb og karriere
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
-                    <nav class="mega-menu__nav">
-                        <ul id="nav">
-                            <li class="mega-menu__item">
-                                <button type="button" class="header__button mega-menu__toggle collapsed "
-                                        data-parent="#nav" data-toggle="collapse" data-target="#menuCollapse0"
-                                        aria-expanded="false" aria-controls="menuCollapse0">
-                                    <img data-th-src="${portal.assetUrl({'_path=images/chevron-down.svg'})}" alt="" width="15">
-                                    Aktuelt og presse
-                                </button>
-                                <div id="menuCollapse0" class="mega-menu__collapse collapse ">
-                                    <ul>
-                                        <li class="mega-menu__sub-item  ">
-                                            <a href="#"
-                                               class="underline-draw">
-                                                Artikler med video
-                                            </a>
-                                        </li>
-                                        <li class="mega-menu__sub-item  ">
-                                            <a href="#"
-                                               class="underline-draw">
-                                                Aktuelle saker
-                                            </a>
-                                        </li>
-                                        <li class="mega-menu__sub-item  ">
-                                            <a href="#"
-                                               class="underline-draw">
-                                                Artikler
-                                            </a>
-                                        </li>
-                                        <li class="mega-menu__sub-item  ">
-                                            <a href="#"
-                                               class="underline-draw">
-                                                Presse
-                                            </a>
-                                        </li>
-                                        <li class="mega-menu__sub-item  ">
-                                            <a href="#"
-                                               class="underline-draw">
-                                                Mediearkiv
-                                            </a>
-                                        </li>
-                                        <li class="mega-menu__sub-item  ">
-                                            <a href="#"
-                                               class="underline-draw">
-                                                Kalender
-                                            </a>
-                                        </li>
-                                        <li class="mega-menu__sub-item  ">
-                                            <a href="#"
-                                               class="underline-draw">
-                                                Offentleg journal
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="mega-menu__item">
-                                <button type="button" class="header__button mega-menu__toggle collapsed "
-                                        data-parent="#nav" data-toggle="collapse" data-target="#menuCollapse1"
-                                        aria-expanded="false" aria-controls="menuCollapse1">
-                                    <img data-th-src="${portal.assetUrl({'_path=images/chevron-down.svg'})}" alt="" width="15">
-                                    Om Forsvaret
-                                </button>
-                                <div id="menuCollapse1" class="mega-menu__collapse collapse ">
-                                    <ul>
-                                        <li class="mega-menu__sub-item  ">
-                                            <a href="#"
-                                               class="underline-draw">
-                                                Utstyr og materiell
-                                            </a>
-                                        </li>
-                                        <li class="mega-menu__sub-item  ">
-                                            <a href="#"
-                                               class="underline-draw">
-                                                Organisasjon
-                                            </a>
-                                        </li>
-                                        <li class="mega-menu__sub-item  ">
-                                            <a href="#"
-                                               class="underline-draw">
-                                                Utstyr
-                                            </a>
-                                        </li>
-                                        <li class="mega-menu__sub-item  ">
-                                            <a href="#"
-                                               class="underline-draw">
-                                                Tjenestesteder
-                                            </a>
-                                        </li>
-                                        <li class="mega-menu__sub-item  ">
-                                            <a href="#"
-                                               class="underline-draw">
-                                                Operasjoner og øvelser
-                                            </a>
-                                        </li>
-                                        <li class="mega-menu__sub-item  ">
-                                            <a href="#"
-                                               class="underline-draw">
-                                                Verdier, historie og oppgaver
-                                            </a>
-                                        </li>
-                                        <li class="mega-menu__sub-item  ">
-                                            <a href="#"
-                                               class="underline-draw">
-                                                Undersøkelser og rapporter
-                                            </a>
-                                        </li>
-                                        <li class="mega-menu__sub-item  ">
-                                            <a href="#"
-                                               class="underline-draw">
-                                                Uniformer, militære grader og medaljer
-                                            </a>
-                                        </li>
-                                        <li class="mega-menu__sub-item  ">
-                                            <a href="#"
-                                               class="underline-draw">
-                                                Tall og statistikk
-                                            </a>
-                                        </li>
-                                        <li class="mega-menu__sub-item  ">
-                                            <a href="#"
-                                               class="underline-draw">
-                                                Kultur
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="mega-menu__item">
-                                <button type="button" class="header__button mega-menu__toggle collapsed "
-                                        data-parent="#nav" data-toggle="collapse" data-target="#menuCollapse2"
-                                        aria-expanded="false" aria-controls="menuCollapse2">
-                                    <img data-th-src="${portal.assetUrl({'_path=images/chevron-down.svg'})}" alt="" width="15">
-                                    Forskning
-                                </button>
-                                <div id="menuCollapse2" class="mega-menu__collapse collapse ">
-                                    <ul>
-                                        <li class="mega-menu__sub-item  ">
-                                            <a href="#"
-                                               class="underline-draw">
-                                                Prosjekter
-                                            </a>
-                                        </li>
-                                        <li class="mega-menu__sub-item  ">
-                                            <a href="#"
-                                               class="underline-draw">
-                                                Forskningsimport
-                                            </a>
-                                        </li>
-                                        <li class="mega-menu__sub-item  ">
-                                            <a href="#"
-                                               class="underline-draw">
-                                                Om forskning og utvikling
-                                            </a>
-                                        </li>
-                                        <li class="mega-menu__sub-item  ">
-                                            <a href="#"
-                                               class="underline-draw">
-                                                Publikasjoner
-                                            </a>
-                                        </li>
-                                        <li class="mega-menu__sub-item  ">
-                                            <a href="#"
-                                               class="underline-draw">
-                                                Ansatte
-                                            </a>
-                                        </li>
-                                        <li class="mega-menu__sub-item  ">
-                                            <a href="#"
-                                               class="underline-draw">
-                                                Arrangement
-                                            </a>
-                                        </li>
-                                        <li class="mega-menu__sub-item  ">
-                                            <a href="#"
-                                               class="underline-draw">
-                                                Bibliotek
-                                            </a>
-                                        </li>
-                                        <li class="mega-menu__sub-item  ">
-                                            <a href="#"
-                                               class="underline-draw">
-                                                Veiledning for forskere og studenter
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="mega-menu__item">
-                                <button type="button" class="header__button mega-menu__toggle collapsed "
-                                        data-parent="#nav" data-toggle="collapse" data-target="#menuCollapse3"
-                                        aria-expanded="false" aria-controls="menuCollapse3">
-                                    <img data-th-src="${portal.assetUrl({'_path=images/chevron-down.svg'})}" alt="" width="15">
-                                    Soldater og ansatte
-                                </button>
-                                <div id="menuCollapse3" class="mega-menu__collapse collapse ">
-                                    <ul>
-                                        <li class="mega-menu__sub-item  ">
-                                            <a href="#"
-                                               class="underline-draw">
-                                                Artikkeltesting
-                                            </a>
-                                        </li>
-                                        <li class="mega-menu__sub-item  ">
-                                            <a href="#"
-                                               class="underline-draw">
-                                                Testlandingsside
-                                            </a>
-                                        </li>
-                                        <li class="mega-menu__sub-item  ">
-                                            <a href="#"
-                                               class="underline-draw">
-                                                Testside for relaterte artikler
-                                            </a>
-                                        </li>
-                                        <li class="mega-menu__sub-item  ">
-                                            <a href="#"
-                                               class="underline-draw">
-                                                Soldat
-                                            </a>
-                                        </li>
-                                        <li class="mega-menu__sub-item  ">
-                                            <a href="#"
-                                               class="underline-draw">
-                                                Ansatt
-                                            </a>
-                                        </li>
-                                        <li class="mega-menu__sub-item  ">
-                                            <a href="#"
-                                               class="underline-draw">
-                                                Kontakt og varsling
-                                            </a>
-                                        </li>
-                                        <li class="mega-menu__sub-item  ">
-                                            <a href="#"
-                                               class="underline-draw">
-                                                Regelverksportalen - FOBID
-                                            </a>
-                                        </li>
-                                        <li class="mega-menu__sub-item  ">
-                                            <a href="#"
-                                               class="underline-draw">
-                                                Prinsix
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="mega-menu__item">
-                                <button type="button" class="header__button mega-menu__toggle collapsed "
-                                        data-parent="#nav" data-toggle="collapse" data-target="#menuCollapse4"
-                                        aria-expanded="false" aria-controls="menuCollapse4">
-                                    <img data-th-src="${portal.assetUrl({'_path=images/chevron-down.svg'})}" alt="" width="15">
-                                    Veteraner
-                                </button>
-                                <div id="menuCollapse4" class="mega-menu__collapse collapse ">
-                                    <ul>
-                                        <li class="mega-menu__sub-item  ">
-                                            <a href="#"
-                                               class="underline-draw">
-                                                Forsvarets veteransenter
-                                            </a>
-                                        </li>
-                                        <li class="mega-menu__sub-item  ">
-                                            <a href="#"
-                                               class="underline-draw">
-                                                Oppfølging og tilbud
-                                            </a>
-                                        </li>
-                                        <li class="mega-menu__sub-item  ">
-                                            <a href="#"
-                                               class="underline-draw">
-                                                Fakta, lenker og doumenter
-                                            </a>
-                                        </li>
-                                        <li class="mega-menu__sub-item  ">
-                                            <a href="#"
-                                               class="underline-draw">
-                                                Kalender
-                                            </a>
-                                        </li>
-                                        <li class="mega-menu__sub-item  ">
-                                            <a href="#"
-                                               class="underline-draw">
-                                                Familie og pårørende
-                                            </a>
-                                        </li>
-                                        <li class="mega-menu__sub-item  ">
-                                            <a href="#"
-                                               class="underline-draw">
-                                                Kontakt
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="mega-menu__item">
-                                <button type="button" class="header__button mega-menu__toggle collapsed "
-                                        data-parent="#nav" data-toggle="collapse" data-target="#menuCollapse5"
-                                        aria-expanded="false" aria-controls="menuCollapse5">
-                                    <img data-th-src="${portal.assetUrl({'_path=images/chevron-down.svg'})}" alt="" width="15">
-                                    Heimevernet
-                                </button>
-                                <div id="menuCollapse5" class="mega-menu__collapse collapse ">
-                                    <ul>
-                                        <li class="mega-menu__sub-item">
-                                            <a href="#"
-                                               class="underline-draw">
-                                                Aktuelt Heimevernet
-                                            </a>
-                                        </li>
-                                        <li class="mega-menu__sub-item  ">
-                                            <a href="#"
-                                               class="underline-draw">
-                                                Heimevernets distrikter TEST
-                                            </a>
-                                        </li>
-                                        <li class="mega-menu__sub-item  ">
-                                            <a href="#"
-                                               class="underline-draw">
-                                                Under trening
-                                            </a>
-                                        </li>
-                                        <li class="mega-menu__sub-item  ">
-                                            <a href="#"
-                                               class="underline-draw">
-                                                Innsatsstyrker
-                                            </a>
-                                        </li>
-                                        <li class="mega-menu__sub-item  ">
-                                            <a href="#"
-                                               class="underline-draw">
-                                                Kristian
-                                            </a>
-                                        </li>
-                                        <li class="mega-menu__sub-item  ">
-                                            <a href="#"
-                                               class="underline-draw">
-                                                Kurs
-                                            </a>
-                                        </li>
-                                        <li class="mega-menu__sub-item  ">
-                                            <a href="#"
-                                               class="underline-draw">
-                                                Kurs og kompetanse
-                                            </a>
-                                        </li>
-                                        <li class="mega-menu__sub-item  ">
-                                            <a href="#"
-                                               class="underline-draw">
-                                                Ny i Heimevernet
-                                            </a>
-                                        </li>
-                                        <li class="mega-menu__sub-item  ">
-                                            <a href="#"
-                                               class="underline-draw">
-                                                Praktisk informasjon
-                                            </a>
-                                        </li>
-                                        <li class="mega-menu__sub-item  ">
-                                            <a href="#"
-                                               class="underline-draw">
-                                                Slik blir du innsatssoldat
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="mega-menu__item">
-                                <button type="button" class="header__button mega-menu__toggle collapsed "
-                                        data-parent="#nav" data-toggle="collapse" data-target="#menuCollapse6"
-                                        aria-expanded="false" aria-controls="menuCollapse6">
-                                    <img data-th-src="${portal.assetUrl({'_path=images/chevron-down.svg'})}" alt="" width="15">
-                                    Parter og blokker
-                                </button>
-                                <div id="menuCollapse6" class="mega-menu__collapse collapse ">
-                                    <ul>
-                                        <li class="mega-menu__sub-item  ">
-                                            <a href="#"
-                                               class="underline-draw">
-                                                Alle parter
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                        </ul>
-                        <div>
-                        </div>
-                    </nav>
-                    <div class="mega-menu__search">
-                        <form>
-                            <label for="search">
-                                    <span class="sr-only">
-                                        Søk </span>
-                                <input class="search__input" name="query" id="search"
-                                       placeholder="Hei, hva ser du etter?">
-                                <button type="submit">
-                                    <img data-th-src="${portal.assetUrl({'_path=images/hourglass.svg'})}" alt="" width="23">
-                                </button>
-                            </label>
-                            <div>
-                                Eks. Ledige stillinger, Pressemeldinger og Medaljer. </div>
-                        </form>
-                    </div>
-                    <div class="mega-menu__links">
+                    <a class="header__title underline-draw" href="http://localhost:8080/admin/site/preview/i-tjeneste-for-norge/draft/no">
+                    I tjeneste for Norge
+                </a>
+                </div>
+                <a class="header__logo" href="http://localhost:8080/admin/site/preview/i-tjeneste-for-norge/draft/no">
+                    <img data-th-src="${portal.assetUrl({'_path=images/logo.svg'})}" alt="Forsvaret-logo - Lenke til forsiden" width="51" height="63">
+                </a>
+                <div class="header__right">
+                    <nav class="header__nav">
                         <ul>
-                            <li>
-                                <a class="underline-draw"
-                                   href="#">
-                                    Kontakt
-                                </a>
+                            <li class="header__nav-item   ">
+                                <a class="underline-draw underline-reverse" href="/admin/site/preview/i-tjeneste-for-norge/draft/no/historier">
+                                        Historier
+                                    </a>
                             </li>
-                            <li>
-                                <a class="underline-draw" href="http://uu.difi.no" rel="noreferrer noopener"
-                                   target="_blank">
-                                    Tilgjengelighet
-                                </a>
+                            <li class="header__nav-item   ">
+                                <a class="underline-draw underline-reverse" href="/admin/site/preview/i-tjeneste-for-norge/draft/no/operasjoner">
+                                        Operasjoner
+                                    </a>
                             </li>
-                            <li>
-                                <a class="underline-draw" href="http://uu.difi.no" rel="noreferrer noopener"
-                                   target="_blank">
-                                    Personvern
-                                </a>
+                            <li class="header__nav-item   is-promoted">
+                                <a class=" " href="/admin/site/preview/i-tjeneste-for-norge/draft/no/fortell-din-historie">
+                                        Fortell din historie
+                                    </a>
                             </li>
                         </ul>
+                    </nav>
+                    <div class="header__search">
+                        <button type="button" class="header__button header__menu-toggle header__menu-toggle--search" aria-label="Søk">
+                        <span class="header__label">
+    Søk                    </span>
+                        <svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13.6463 7.24117C13.6463 10.7396 10.7967 13.5823 7.27313 13.5823C3.74961 13.5823 0.9 10.7396 0.9 7.24117C0.9 3.74277 3.74961 0.9 7.27313 0.9C10.7967 0.9 13.6463 3.74277 13.6463 7.24117Z" stroke="#191B21" stroke-width="2"></path>
+                            <path d="M12 11.9473L16 15.9297" stroke="#191B21" stroke-width="2" stroke-linecap="square"></path>
+                        </svg>
+                    </button>
                     </div>
-                    <div class="mega-menu__some">
-                        <a class="footer__some" href="https://twitter.com/forsvaret_no/" rel="noreferrer noopener"
-                           target="_blank" title="Twitter">
-                            <img data-th-src="${portal.assetUrl({'_path=images/twitter.svg'})}" alt="Twitter logo" width="20">
-                        </a>
-                        <a class="footer__some" href="https://facebook.com/forsvaret" rel="noreferrer noopener"
-                           target="_blank" title="Facebook">
-                            <img data-th-src="${portal.assetUrl({'_path=images/facebook.svg'})}" alt="Facebook logo" width="20">
-                        </a>
-                        <a class="footer__some" href="https://instagram.com/forsvaret" rel="noreferrer noopener"
-                           target="_blank" title="Instagram">
-                            <img data-th-src="${portal.assetUrl({'_path=images/instagram.svg'})}" alt="Instagram logo" width="19">
-                        </a>
+                    <div class="header__menu">
+                        <button type="button" class="header__button header__menu-toggle" aria-label="Meny">
+                        <span class="hamburger">
+                            <span class="hamburger-bar hamburger-bar--top"></span>
+                            <span class="hamburger-bar hamburger-bar--bottom"></span>
+                        </span>
+                        <span class="header__label">
+    Meny                    </span>
+                    </button>
                     </div>
                 </div>
             </div>
-        </div>
-    </header>
-    <div class="breadcrumbs__container">
-    </div>
-    <main data-portal-component-type="region" data-portal-region="main">
-        <!-- just for testing-->
-        <div class="article__top">
-            <div class="article__start  standard-width">
-                <h1></h1>
-                <div class="article__narrow">
-                    <div class="article__meta">
-                        <div class="p-medium" style="text-align: center;">
-                            <strong>Oppdatert:</strong> 23. nov 2020 10:02
+            <div class="header__mega-menu" id="mega-menu">
+                <div class="mega-menu__wrapper menu-wide">
+                    <div class="container search">
+                        <h1>Søkeresultater</h1>
+                        <form action="" class="search__form"><label id="search-label" for="search-input"><span class="sr-only">
+            Søk
+          </span> <input id="search-input" name="query" type="text" class="search__input"></label>
+                            <!----><button type="submit" aria-labelledby="search-label" class="search__submit"><img data-th-src="${portal.assetUrl({'_path=images/hourglass.svg'})}" alt="Søk" width="26"></button></form>
+                        <!---->
+                        <div>
+                            Hva leter du etter?
+                        </div>
+                        <div class="loading-container" style="display: none;">
+                            <div class="banner-body">
+                                <div class="main">
+                                    <div class="icons"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96.5 92.6"><g><path d="M71.7 83.3V63.2l16.4 14.7S74.3 94.4 50.7 94.4a53 53 0 0 1-37.9-16.5l16.4-14.7v20.1" class="rs r5" style="--order:5;"></path> <path d="M41.6 87.3V69.5a30.2 30.2 0 0 0 8.9 1.5 32.5 32.5 0 0 0 8.8-1.5v17.9" class="rs r4" style="--order:4;"></path> <path d="M36 37.6v6.9c0 9 5.8 15.6 14.7 15.6h-.5c8.9 0 14.7-6.5 14.7-15.6v-6.9" class="rs r3" style="--order:3;"></path> <path d="M33.2 31.1H68" class="rs r2" style="--order:2;"></path> <path d="M25.9 41.6V26H29s.9-13.3 13-18.4a21.6 21.6 0 0 1 16-.2c5.7 2.2 12.8 7 14.1 18.6h3.1v15.6" class="rs r1" style="--order:1;"></path></g> <g><path d="M8.7 62.6l6 12.4h65.6l5.9-12.3" class="ls l6" style="--order:6;"></path> <path d="M73.5 60.1a3.2 3.2 0 1 1-3.2 3.2 3.2 3.2 0 0 1 3.2-3.2zm-17-1.3a4.5 4.5 0 1 1-4.5 4.5 4.5 4.5 0 0 1 4.5-4.5zm-18.1 0a4.5 4.5 0 1 1-4.5 4.5 4.5 4.5 0 0 1 4.5-4.5zm-16.9 1.3a3.2 3.2 0 1 1-3.2 3.2 3.2 3.2 0 0 1 3.2-3.2z" class="ls l5" style="--order:5;"></path> <path d="M92.8 62.1v-.4s-.2-4.3-2.9-6.9-4.7-3.2-8.7-3.2H13.8c-3.9 0-6.1.8-8.7 3.2s-2.9 6.9-2.9 6.9v.4" class="ls l4" style="--order:4;"></path> <path d="M81.6 44H16.5s-6.4.2-6.4-8.2" class="ls l3" style="--order:3;"></path> <path d="M23.4 38.4l4.5-12.1h29.7l6.9 9.9 34.2-14.3" class="ls l2" style="--order:2;"></path> <path d="M42.4 19.5v6.6" class="ls l1" style="--order:1;"></path></g> <g><path d="M45.9 93.7a6.1 6.1 0 0 0 3-.8 9.7 9.7 0 0 1 5.7-2.1 9.7 9.7 0 0 1 5.4 1.8 5.9 5.9 0 0 0 3.8 1.2 7.7 7.7 0 0 0 4.3-1.7 8 8 0 0 1 4.5-1.4 10.6 10.6 0 0 1 5.9 2.1 5.8 5.8 0 0 0 3.3 1" class="ss s8" style="--order:8;"></path> <path d="M14.9 87.1a6 6 0 0 0 2.9-.8 10 10 0 0 1 5.5-2 8.2 8.2 0 0 1 5.1 1.7 5.6 5.6 0 0 0 3.7 1.1 7.7 7.7 0 0 0 4.1-1.6 9.5 9.5 0 0 1 4.3-1.4 10.3 10.3 0 0 1 5.6 2 6.2 6.2 0 0 0 3.2.9" class="ss s7" style="--order:7;"></path> <path d="M60.5 52.4v9.5" class="ss s6" style="--order:6;"></path> <path d="M60.6 41.5l24.7 18.2s-9.7 13.5-10.8 23.5" class="ss s5" style="--order:5;"></path> <path d="M53.4 82.4V37l-2.3-1.1-32.6 23.7s7.9 11.5 9.6 20.6" class="ss s4" style="--order:4;"></path> <path d="M49.1 28.8h22.5l3.3 15.3" class="ss s3" style="--order:3;"></path> <path d="M29 44l3.2-15.2h8.6l5.4-12.7h11.4l3 6.9" class="ss s2" style="--order:2;"></path> <path d="M51.8 1.7v14.1" class="ss s1" style="--order:1;"></path></g> <g><path d="M33.7 74.4c-4.1 2.9-11 7.8-17.9 11l-3.3 1.7a35.4 35.4 0 0 1 1.6-3.4 105.9 105.9 0 0 1 11.1-17.8" class="ps p6" style="--order:6;"></path> <path d="M21.3 57.8l6.4-.3 16.4 16.3v5.5" class="ps p5" style="--order:5;"></path> <path d="M9.3 57.8l8.4-8.4h11.8l15.6-13.7" class="ps p4" style="--order:4;"></path> <path d="M64.6 53.2l-14 16.1V81l-7.9 7.8" class="ps p3" style="--order:3;"></path> <path d="M50.3 44c10.3-15.4 15.4-15.6 17.8-15.8h.6a2.4 2.4 0 0 1 1.4.5 2.3 2.3 0 0 1 .6 1.6v.3c-.3 2.4-.6 6.9-16 18" class="ps p2" style="--order:2;"></path> <path d="M34.5 37.5L16.1 24l.6-2.1 5.6-3.7 29.8 9.7 36.1-16.6-16.7 36L81.2 77l-3.8 6-1.7.6L63 66.2l.8-1.9" class="ps p1" style="--order:1;"></path></g></svg></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mega-menu__wrapper menu-small">
+                    <div class="mega-menu">
+                        <div class="mega-menu_top">
+                            <a class="mega-menu__logo underline-draw__root" href="http://localhost:8080/admin/site/preview/i-tjeneste-for-norge/draft/no">
+                                <img class="mega-menu__logo-img" data-th-src="${portal.assetUrl({'_path=images/logo.svg'})}" alt="Forsvaret-logo - Lenke til forsiden" width="51" height="63">
+                                <span class="header__title underline-draw__target">
+                        I tjeneste for Norge
+                    </span>
+                            </a>
+                            <div class="mega-menu__close">
+                                <button type="button" class="header__button mega-menu__close header__menu-toggle" aria-label="Lukk meny">
+                        <span class="hamburger">
+                            <span class="hamburger-bar hamburger-bar--top"></span>
+                            <span class="hamburger-bar hamburger-bar--bottom"></span>
+                        </span>
+                        <span class="header__label">
+                            Lukk meny
+                        </span>
+                    </button>
+                            </div>
+                        </div>
+                        <div class="mega-menu__search">
+                            <form action="#" method="GET">
+                                <div class="mega-menu__search-button">
+                                    <label for="search" id="searchLabel">
+                            <span class="sr-only">
+                                Søk
+                            </span>
+                            <input class="search__input" name="query" id="search" type="text" placeholder="Hei, hva ser du etter?">
+                        </label>
+                                    <button type="submit" id="searchbtn" aria-labelledby="searchLabel">
+                            <img src="/admin/site/preview/i-tjeneste-for-norge/draft/_/asset/no.bouvet.itjfn:1612858542/images/hourglass.svg" alt="" width="23">
+                        </button>
+                                </div>
+                                <div class="mega-menu__search-help">
+                                    F.eks Libanon
+                                </div>
+                            </form>
+                        </div>
+                        ​
+                        <nav class="mega-menu__nav">
+                            <ul id="nav">
+                                <li class="nav__item   ">
+                                    <a class="underline-draw" href="/admin/site/preview/i-tjeneste-for-norge/draft/no/historier">
+                                Historier
+                            </a>
+                                </li>
+                                <li class="nav__item   ">
+                                    <a class="underline-draw" href="/admin/site/preview/i-tjeneste-for-norge/draft/no/operasjoner">
+                                Operasjoner
+                            </a>
+                                </li>
+                                <li class="nav__item   is-promoted">
+                                    <a class=" " href="/admin/site/preview/i-tjeneste-for-norge/draft/no/fortell-din-historie">
+                                Fortell din historie
+                            </a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="mega-menu__bot">
+                            <div class="mega-menu__links">
+                                <ul>
+                                    <li>
+                                        <a class="underline-draw" href="asd" rel="noreferrer noopener" target="_blank">
+                                            <span>Om siden</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="underline-draw" href="asd" rel="noreferrer noopener" target="_blank">
+                                            <span>Kontakt</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="underline-draw" href="asd" rel="noreferrer noopener" target="_blank">
+                                            <span>Personverm</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="mega-menu__some">
+                                <a class="footer__some" href="asd" rel="noreferrer noopener" target="_blank" title="Twitter">
+                                    <img data-th-src="${portal.assetUrl({'_path=images/twitter.svg'})}" alt="Twitter logo" width="20">
+                                </a>
+                                <a class="footer__some" href="asd" rel="noreferrer noopener" target="_blank" title="Facebook">
+                                    <img data-th-src="${portal.assetUrl({'_path=images/facebook.svg'})}" alt="Facebook logo" width="20">
+                                </a>
+                                <a class="footer__some" href="asd" rel="noreferrer noopener" target="_blank" title="Instagram">
+                                    <img data-th-src="${portal.assetUrl({'_path=images/instagram.svg'})}" alt="Instagram logo" width="19">
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </header>
+        <div class="breadcrumbs__container">
         </div>
-        <div data-th-each="component : ${region.components}" data-th-remove="tag">
-            <div data-portal-component="${component.path}" data-th-remove="tag" />
-        </div>
-    </main>
-    <footer>
-        <div class="footer__logo">
-            <img data-th-src="${portal.assetUrl({'_path=images/logo-bottom.svg'})}" alt="Logo">
-        </div>
-        <ul class="footer__list footer__links">
-            <li class="footer__item">
-                <a class="footer__link underline-draw"
-                   href="#">
+        <main data-portal-component-type="region" data-portal-region="main">
+            <div data-th-each="component : ${region.components}" data-th-remove="tag">
+                <div data-portal-component="${component.path}" data-th-remove="tag" />
+            </div>
+        </main>
+        <footer>
+            <div class="footer__logo">
+                <img data-th-src="${portal.assetUrl({'_path=images/logo-bottom.svg'})}" alt="Logo">
+            </div>
+            <ul class="footer__list footer__links">
+                <li class="footer__item">
+                    <a class="footer__link underline-draw" href="#">
                     Kontakt
                 </a>
-            </li>
-            <li class="footer__item">
-                <a class="footer__link underline-draw" href="http://uu.difi.no" rel="noreferrer noopener"
-                   target="_blank">
+                </li>
+                <li class="footer__item">
+                    <a class="footer__link underline-draw" href="http://uu.difi.no" rel="noreferrer noopener" target="_blank">
                     Tilgjengelighet
                 </a>
-            </li>
-            <li class="footer__item">
-                <a class="footer__link underline-draw" href="http://uu.difi.no" rel="noreferrer noopener"
-                   target="_blank">
+                </li>
+                <li class="footer__item">
+                    <a class="footer__link underline-draw" href="http://uu.difi.no" rel="noreferrer noopener" target="_blank">
                     Personvern
                 </a>
-            </li>
-        </ul>
-        <div class="footer__list">
-            <a class="footer__some" href="https://twitter.com/forsvaret_no/" rel="noreferrer noopener" target="_blank"
-               title="Twitter">
-                <img data-th-src="${portal.assetUrl({'_path=images/twitter.svg'})}" alt="Twitter logo" width="20">
-            </a>
-            <a class="footer__some" href="https://facebook.com/forsvaret" rel="noreferrer noopener" target="_blank"
-               title="Facebook">
-                <img data-th-src="${portal.assetUrl({'_path=images/facebook.svg'})}" alt="Facebook logo" width="20">
-            </a>
-            <a class="footer__some" href="https://instagram.com/forsvaret" rel="noreferrer noopener" target="_blank"
-               title="Instagram">
-                <img data-th-src="${portal.assetUrl({'_path=images/instagram.svg'})}" alt="Instagram logo" width="19">
-            </a>
-        </div>
-        <div class="footer__copyright">
-            Opphavsrett Forsvaret © 2020
-        </div>
-    </footer>
-<script data-th-src="${portal.assetUrl({'_path=js/vendor.js'})}" async=""></script>
-<script data-th-src="${portal.assetUrl({'_path=js/main.js'})}" async=""></script>
-</body>
+                </li>
+            </ul>
+            <div class="footer__list">
+                <a class="footer__some" href="https://twitter.com/forsvaret_no/" rel="noreferrer noopener" target="_blank" title="Twitter">
+                    <img data-th-src="${portal.assetUrl({'_path=images/twitter.svg'})}" alt="Twitter logo" width="20">
+                </a>
+                <a class="footer__some" href="https://facebook.com/forsvaret" rel="noreferrer noopener" target="_blank" title="Facebook">
+                    <img data-th-src="${portal.assetUrl({'_path=images/facebook.svg'})}" alt="Facebook logo" width="20">
+                </a>
+                <a class="footer__some" href="https://instagram.com/forsvaret" rel="noreferrer noopener" target="_blank" title="Instagram">
+                    <img data-th-src="${portal.assetUrl({'_path=images/instagram.svg'})}" alt="Instagram logo" width="19">
+                </a>
+            </div>
+            <div class="footer__copyright">
+                Opphavsrett Forsvaret © 2020
+            </div>
+        </footer>
+        <script data-th-src="${portal.assetUrl({'_path=js/vendor.js'})}" async=""></script>
+        <script data-th-src="${portal.assetUrl({'_path=js/main.js'})}" async=""></script>
+    </body>
+
 </html>
