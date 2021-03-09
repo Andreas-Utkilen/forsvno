@@ -311,7 +311,9 @@ exports.get = () => {
     buttonText: config.buttonText,
     data: mapdata,
     icons: {
-      arrowRight: libs.portal.assetUrl({ path: "images/arrow-right-white.svg" }),
+      close: libs.portal.assetUrl({ path: "images/close-small-white.svg" }),
+      minus: libs.portal.assetUrl({ path: "images/minus.svg" }),
+      plus: libs.portal.assetUrl({ path: "images/plus.svg" }),
       marker: libs.portal.assetUrl({ path: "images/marker.png" }),
       markerRetina: libs.portal.assetUrl({ path: "images/marker.png" }),
       shadow: libs.portal.assetUrl({ path: "images/marker-shadow.png" }),
