@@ -5,37 +5,75 @@
 
 .digital-museum__wrapper .digital-museum #wcontainer #wsearch-pages {
   margin-top: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#wcontainer[data-cols="1"] #wsearch-pages {
+  max-width: 148px;
+}
+
+#wcontainer[data-cols="2"] #wsearch-pages {
+  max-width: 296px;
+}
+
+#wcontainer[data-cols="3"] #wsearch-pages {
+  max-width: 444px;
+}
+
+#wcontainer[data-cols="4"] #wsearch-pages {
+  max-width: 592px;
+}
+
+#wcontainer[data-cols="5"] #wsearch-pages {
+  max-width: 740px;
+}
+
+#wcontainer[data-cols="6"] #wsearch-pages {
+  max-width: 888px;
 }
 
 .digital-museum__wrapper .digital-museum #wcontainer #wsearch-pages .pages {
-  padding-left: 35px;
-  padding-right: 0px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.digital-museum__wrapper .digital-museum #wcontainer #wsearch-pages .pages::before,
+.digital-museum__wrapper .digital-museum #wcontainer #wsearch-pages .pages::after {
+  content: "";
 }
 
 .digital-museum__wrapper .digital-museum #wcontainer #wsearch-pages .next,
 .digital-museum__wrapper .digital-museum #wcontainer #wsearch-pages .prev {
-  content: "";
-  background: url(../images/arrow-right.svg);
-  width: 25px;
-  height: 12.5px;
-  font-size: 0;
   vertical-align: middle;
   margin: 0 5px;
-  margin-bottom: 4px;
-  background-repeat: no-repeat;
-  color: transparent;
 }
 
-.digital-museum__wrapper .digital-museum #wcontainer #wsearch-pages .prev+.pages {
-  padding-left: 0;
+.digital-museum__wrapper .digital-museum #wcontainer #wsearch-pages .next {
+  background: url(../images/arrow-right.svg);
+  background-repeat: no-repeat;
+  background-size: 20px 25px;
+  background-position: 100% center;
+  padding-right: 25px;
+  margin-left: auto;
+  margin-right: 15%;
 }
 
 .digital-museum__wrapper .digital-museum #wcontainer #wsearch-pages .prev {
-  -webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  -o-transform: rotate(180deg);
-  transform: rotate(180deg);
+  background: url(../images/arrow-right.svg);
+  background-repeat: no-repeat;
+  background-size: 20px 25px;
+  background-position: 0 center;
+  padding-left: 25px;
+  margin-right: auto;
+  margin-left: 15%;
+}
+
+.digital-museum__wrapper .digital-museum #wcontainer #wsearch-pages .next:hover,
+.digital-museum__wrapper .digital-museum #wcontainer #wsearch-pages .prev:hover {
+  text-decoration: underline;
 }
 
 .digital-museum__wrapper .digital-museum #wcontainer #wsearch-pages * {
@@ -106,5 +144,17 @@
 @media (max-width: 888px) {
   .digital-museum__wrapper .digital-museum {
     height: unset !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .digital-museum__wrapper .digital-museum #wcontainer #wsearch-pages * {
+    font-size: .8rem;
+  }
+  .digital-museum__wrapper .digital-museum #wcontainer #wsearch-pages .next {
+    margin-right: 5%;
+  }
+  .digital-museum__wrapper .digital-museum #wcontainer #wsearch-pages .prev {
+    margin-left: 5%;
   }
 }
