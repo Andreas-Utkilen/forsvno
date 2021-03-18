@@ -7,7 +7,12 @@
   margin: 0 auto;
 }
 
-.spinview__wrapper .spinview iframe,
+.spinview__wrapper .spinview iframe {
+  border: none;
+  height: 100%;
+  width: 100%;
+}
+
 .spinview__wrapper .spinview .spinview__cover-image {
   border: none;
   height: 100%;
@@ -78,6 +83,7 @@
     top: 0;
     left: 0;
     max-height: unset;
+    background: black;
   }
 }
 
@@ -95,5 +101,6 @@
     position: fixed;
     top: 0;
     left: 0;
+    background: black;
   }
 }
