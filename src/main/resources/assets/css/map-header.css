@@ -272,6 +272,12 @@
   .map-header__wrapper .map-header__page-top {
     height: -webkit-fill-available;
   }
+  .map-header__wrapper .map-header__exit-button {
+    bottom: 1rem;
+  }
+  .map-header__wrapper .map-header__controls {
+    right: 1rem;
+  }
 }
 
 @media (max-width: 991px) {
