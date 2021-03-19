@@ -1,5 +1,5 @@
 <part xmlns="urn:enonic:xp:model:1.0">
-    <display-name>spinview</display-name>
+    <display-name>Spinview</display-name>
     <form>
         <input name="url" type="TextLine">
             <!-- @description[no]: Spinview URL -->
