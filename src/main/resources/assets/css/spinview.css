@@ -9,8 +9,8 @@
 
 .spinview__wrapper .spinview iframe {
   border: none;
-  height: 100%;
   width: 100%;
+  max-height: 900px;
 }
 
 .spinview__wrapper .spinview .spinview__cover-image {
@@ -77,8 +77,6 @@
   }
   .spinview__wrapper .spinview__interactive {
     height: 100vh;
-    height: -webkit-fill-available;
-    height: -moz-available;
     position: fixed;
     top: 0;
     left: 0;
@@ -96,8 +94,6 @@
 @media (max-height: 900px) {
   .spinview__wrapper .spinview__interactive {
     height: 100vh;
-    height: -webkit-fill-available;
-    height: -moz-available;
     position: fixed;
     top: 0;
     left: 0;
