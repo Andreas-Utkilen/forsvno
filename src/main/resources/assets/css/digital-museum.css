@@ -5,6 +5,95 @@
 
 .digital-museum__wrapper .digital-museum #wcontainer #wsearch-pages {
   margin-top: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#wcontainer[data-cols="1"] #wsearch-pages {
+  max-width: 148px;
+}
+
+#wcontainer[data-cols="2"] #wsearch-pages {
+  max-width: 296px;
+}
+
+#wcontainer[data-cols="3"] #wsearch-pages {
+  max-width: 444px;
+}
+
+#wcontainer[data-cols="4"] #wsearch-pages {
+  max-width: 592px;
+}
+
+#wcontainer[data-cols="5"] #wsearch-pages {
+  max-width: 740px;
+}
+
+#wcontainer[data-cols="6"] #wsearch-pages {
+  max-width: 888px;
+}
+
+.digital-museum__wrapper .digital-museum #wcontainer #wsearch-pages .pages {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.digital-museum__wrapper .digital-museum #wcontainer #wsearch-pages .pages::before,
+.digital-museum__wrapper .digital-museum #wcontainer #wsearch-pages .pages::after {
+  content: "";
+}
+
+.digital-museum__wrapper .digital-museum #wcontainer #wsearch-pages .next,
+.digital-museum__wrapper .digital-museum #wcontainer #wsearch-pages .prev {
+  vertical-align: middle;
+  margin: 0 5px;
+}
+
+.digital-museum__wrapper .digital-museum #wcontainer #wsearch-pages .next {
+  position: relative;
+  margin-left: auto;
+  padding-right: 25px;
+  margin-right: 15%;
+}
+
+.digital-museum__wrapper .digital-museum #wcontainer #wsearch-pages .next::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 20px;
+  height: 25px;
+  background: url(../images/arrow-right.svg);
+  background-repeat: no-repeat;
+  background-size: 20px 25px;
+  background-position: 0 center;
+}
+
+.digital-museum__wrapper .digital-museum #wcontainer #wsearch-pages .prev {
+  position: relative;
+  padding-left: 25px;
+  margin-right: auto;
+  margin-left: 15%;
+  transform: rotate(0deg);
+}
+
+.digital-museum__wrapper .digital-museum #wcontainer #wsearch-pages .prev::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 20px;
+  height: 25px;
+  background: url(../images/arrow-right.svg);
+  background-repeat: no-repeat;
+  background-size: 20px 25px;
+  background-position: 0 center;
+  transform: rotate(180deg);
+}
+
+.digital-museum__wrapper .digital-museum #wcontainer #wsearch-pages .next:hover,
+.digital-museum__wrapper .digital-museum #wcontainer #wsearch-pages .prev:hover {
+  text-decoration: underline;
 }
 
 .digital-museum__wrapper .digital-museum #wcontainer #wsearch-pages * {
@@ -40,7 +129,7 @@
 
 .digital-museum__wrapper .digital-museum #wcontainer .wsearch-submit {
   border: none;
-  top: 11px;
+  top: 14px;
   width: 25px;
 }
 
@@ -75,5 +164,33 @@
 @media (max-width: 888px) {
   .digital-museum__wrapper .digital-museum {
     height: unset !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .digital-museum__wrapper .digital-museum #wcontainer #wsearch-pages * {
+    font-size: .8rem;
+  }
+  .digital-museum__wrapper .digital-museum #wcontainer #wsearch-pages .next {
+    margin-right: 5%;
+  }
+  .digital-museum__wrapper .digital-museum #wcontainer #wsearch-pages .prev {
+    margin-left: 5%;
+  }
+  .digital-museum__wrapper .digital-museum #wcontainer #wsearch-pages .prev {
+    padding-left: 18px;
+  }
+  .digital-museum__wrapper .digital-museum #wcontainer #wsearch-pages .next {
+    padding-right: 18px;
+  }
+  .digital-museum__wrapper .digital-museum #wcontainer #wsearch-pages .prev::before {
+    width: 14px;
+    height: 18px;
+    background-size: 14px 18px;
+  }
+  .digital-museum__wrapper .digital-museum #wcontainer #wsearch-pages .next::before {
+    width: 14px;
+    height: 18px;
+    background-size: 14px 18px;
   }
 }
