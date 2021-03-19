@@ -1,0 +1,24 @@
+<part xmlns="urn:enonic:xp:model:1.0">
+    <display-name>spinview</display-name>
+    <form>
+        <input name="url" type="TextLine">
+            <!-- @description[no]: Spinview URL -->
+            <!-- @description[en]: Spinview URL -->
+            <label i18n="spinview">Spinview URL</label>
+            <config>
+                <regexp>https\:\/\/vr\.spinviewglobal\.com\/[A-Za-z\d\-\.\_\~\:\/\?\#\[\]\@\!\$\'\(\)\*\+\,\;\%\=]+</regexp> 
+            </config>
+        </input>
+        <input name="cover" type="ImageSelector">
+            <!-- @description[no]: Cover -->
+            <!-- @description[en]: Cover -->
+            <label i18n="cover">Cover</label>
+            <occurrences minimum="1" maximum="1"/>
+            <config>
+                <allowPath>${site}/*</allowPath>
+                <treeMode>true</treeMode>
+                <showStatus>true</showStatus>
+            </config>
+        </input>
+    </form>
+</part>
